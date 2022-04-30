@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+# User Account Model:
+class UserDetails(models.Model):
+        
