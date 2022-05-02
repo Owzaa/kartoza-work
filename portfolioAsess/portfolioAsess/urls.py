@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from folioApp.views import HomeView,SignUpView,LoginView,MapView,User_DetailsView,User_EditDetailsView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', HomeView, name='home'),
+    path('sign-up/', SignUpView, name='sign-up'),
+    path('login/', LoginView, name='login'),
+    path('user-Details/', User_DetailsView, name='user-details'),
+    path('user-Edit-Details/', User_EditDetailsView, name='user-edit-details'),
+    path('MapDetails/', MapView, name='map-details')
+
+
 ]
