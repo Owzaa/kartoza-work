@@ -8,7 +8,7 @@ from account.models import UserProfile
 
 # HomeView  function
 def HomeView(request):
-    return render(request,template_name="/templates/home/index.html") 
+    return render(request,template_name='portfolioAsess/templates/home/index.html',context={}) 
 # Sign-up View Function
 def SignUpView(request):
     Template = "/templates/sign-up/sign-up.html"
