@@ -20,7 +20,7 @@ from folioApp.views import HomeView,SignUpView,LoginView,MapView,User_DetailsVie
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomeView, name='home'),
+    path('', HomeView, name='HomeView'),
     path('sign-up/', SignUpView, name='sign-up'),
     path('login/', LoginView, name='login'),
     path('user-Details/', User_DetailsView, name='user-details'),
