@@ -2,13 +2,32 @@
 {%block title%} LOGIN | Portfolio Application {% endblock %}
 
 {% block content%}
-<div class="form-row">
-<form>
+<div class="container">
+    <span class="HeaderTextContainer">
+        <h1 class="Header">WELCOME TO MY PORTFOLIO APP </h1>
+    </span>
+    <h5 class="text-centered"> LOGIN PAGE </h5>
+<form class="form-row" action="/username/" method="post">
 
-
-    
+<!--Username form Field-->
+    <label for="username"> Username: </label>
+    <input id="username" size=75 type="text" name="username" maxlength="30" required>
+<br/>
+<br/>
+<!--Password Form Field -->
+    <label for="Password"> Password: </label>
+    <input id="Password" size=75 width=45 type="Password" name="Password" required>
+<br/>
+<br/>
+<!--submit form button-->
+<input type="submit" size=35 value="Sign-in">
 </form>
-
+<br/>
+<hr/>
+<!--Call to action when not registered as a User on the system!-->
+<code color="noAccountText"> No Account? </code>
+<span class="signupLink">
+<br/> <a href="/sign-up/"> sign-up </a>  </span>
 
 </div>
 {% endblock%}

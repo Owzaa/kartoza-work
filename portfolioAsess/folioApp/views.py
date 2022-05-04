@@ -14,7 +14,7 @@ def SignUpView(request):
     return render(request,"sign-up/sign-up.html",context={}) 
 # LoginView Function
 def LoginView(request):
-    return render(request,"/login/login.html",{}) 
+    return render(request,"login/login.html",{}) 
 
 # MapViewDetails Page
 def MapView(request):
@@ -23,12 +23,12 @@ def MapView(request):
 
 # UserDetailView Function
 def User_DetailsView(request):
-    Template = "accopunt/UserDetails/userDetails.html"
+    Template = "UserDetails/userDetails.html"
     return render(request,template_name=Template,context={}) 
 
 # userEditDetailView Function
 def User_EditDetailsView(request):
-    Template = "accopunt/UserEditDetails/userEditDetails.html"
+    Template = "UserEditDetails/userEditDetails.html"
     return render(request,template_name=Template,context={})
 
 # Listing Our Accounts stored in the Database:
