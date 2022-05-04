@@ -8,29 +8,27 @@ from account.models import UserProfile
 
 # HomeView  function
 def HomeView(request):
-    return render(request,template_name='kartoza-work/portfolioAsess/folioApp/templates/home/index.html',context={}) 
+    return render(request,'home/index.html',{}) 
 # Sign-up View Function
 def SignUpView(request):
-    Template = "/templates/sign-up/sign-up.html"
-    return render(request,template_name=Template,context={}) 
+    return render(request,"sign-up/sign-up.html",context={}) 
 # LoginView Function
 def LoginView(request):
-    Template = "/templates/login/login.html"
-    return render(request,template_name=Template,context={}) 
+    return render(request,"/login/login.html",{}) 
 
 # MapViewDetails Page
 def MapView(request):
-    Template = "/templates/MapDetail/userMapDetails.html"
+    Template = "MapDetail/userMapDetails.html"
     return render(request,template_name=Template,context={}) 
 
 # UserDetailView Function
 def User_DetailsView(request):
-    Template = "/templates/accopunt/UserDetails/userDetails.html"
+    Template = "accopunt/UserDetails/userDetails.html"
     return render(request,template_name=Template,context={}) 
 
 # userEditDetailView Function
 def User_EditDetailsView(request):
-    Template = "/templates/accopunt/UserEditDetails/userEditDetails.html"
+    Template = "accopunt/UserEditDetails/userEditDetails.html"
     return render(request,template_name=Template,context={})
 
 # Listing Our Accounts stored in the Database:
@@ -41,7 +39,6 @@ def User_EditDetailsView(request):
 
 # Listing all Accounts in our TemplateView    
 def ListAccounts(request):
-    user = get_object_or_404(UserProfile)
-    return render(request,template_name="/templates/account/List-Accounts.html",
-            content_type={user})
+    user = get_object_or_404()
+    return render(request,'account/List-Accounts.html',{})
     
