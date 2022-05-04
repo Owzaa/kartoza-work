@@ -1,3 +1,4 @@
+from django import forms
 from django.forms import ModelForm
 from .models import UserProfile
 
@@ -16,3 +17,12 @@ UserProfile = UserProfile.objects.get(pk=1)
 
 # form instance
 form = userProfileForm(instance=UserProfile)
+
+
+class ProfileForm(forms.Form):
+    username = forms.CharField(max_length=30)
+    email = forms.EmailField()
+    home_address = forms.CharField(widget=forms.Textarea)
+    phone_number = forms.CharField(max_length=10)
+    location = forms.CharField()
+    
