@@ -1,5 +1,54 @@
-* {
-margin:auto;
-padding: 0% 1.5px;
+/* Author: Olwethu Theo Nyondo */ 
+/* Date: 02 May 2022 */ 
+/* link: portfolio.CSS script for Layout */ 
 
+
+* {
+    justify-content: center;
+margin:auto;
+padding: 2.5px;
+padding: top 5px;
+}
+.form-row{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    margin:auto;
+}
+.Container{
+    display: inline;
+    justify-content: center;
+}
+
+
+form{
+    display: flexbox;
+    justify-content: center;
+}
+
+/* All Input attributes styling */
+
+input{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 40px;
+    color: #666;
+    box-shadow: 5px 6px 8px 0px rgba(20, 20, 20, 0.616);
+    border-radius: 8%;
+}
+
+label{
+    display:inline-flex;
+    justify-content:flex-start;
+    padding: 10px;
+    color: #666;
+}
+.signupText{
+
+    display: flex ;
+    justify-content: center;
+    color: rgba(82, 82, 82, 0.795);
+    font-size: 62px;
+    font-weight: 900;
 }
