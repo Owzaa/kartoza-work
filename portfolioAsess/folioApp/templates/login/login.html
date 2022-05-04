@@ -4,10 +4,11 @@
 {% block content%}
 <div class="container">
     <span class="HeaderTextContainer">
-        <h1 class="Header">WELCOME TO MY PORTFOLIO APP </h1>
+        <h1 class="HeaderText">SIGN-IN | KARTOZA PORTFOLIO APPLICATION </h1>
     </span>
-    <h5 class="text-centered"> LOGIN PAGE </h5>
-<form class="form-row" action="/username/" method="post">
+    <hr/>
+    <h5 class="text aligned-center"> LOGIN </h5>
+<form class="form-row" action="/userProfileForm/" method="post">
 
 <!--Username form Field-->
     <label for="username"> Username: </label>
@@ -27,7 +28,8 @@
 <!--Call to action when not registered as a User on the system!-->
 <code color="noAccountText"> No Account? </code>
 <span class="signupLink">
-<br/> <a href="/sign-up/"> sign-up </a>  </span>
+<br/> <a href="/sign-up/">
+    <bold> sign-up </bold> </a>  </span>
 
 </div>
 {% endblock%}

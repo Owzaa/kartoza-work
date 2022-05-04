@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+{%block title%} SIGN-UP | Portfolio Application {% endblock %}
+
+{% block content%}
+<div class="container">
+    <span class="HeaderTextContainer">
+        <h1 class="HeaderText">SIGN-UP | KARTOZA PORTFOLIO APPLICATION </h1>
+    </span>
+    <hr/>
+    <h5 class="text aligned-center"> SIGN-UP </h5>
+<form row class="form-row" action="/userProfileForm/" method="get">
+
+<!--Username form Field-->
+    <label for="username"> Username: </label>
+    <input id="username"  size=65 type="text" name="username" maxlength="30" required>
+<br/>
+<br/>
+<!--userEmail Field-->
+<label for="userEmail"> E-mail: </label>
+<input id="userEmail" size=65 type="email" name="userEmail" required>
+<br/>
+<br/>
+<!--Username form Field-->
+<label for="home_address"> Home Address: </label>
+<textfield id="home_address"  size=65 type="text-field" name="home_address" maxlength="80" required>
+<br/>
+<br/>
+<label for="location"> Location: </label>
+<input id="location" size=65 type="text" name="location" required>
+<br/>
+<br/>
+<label for="phone_number"> Home Address: </label>
+<input id="phone_number" size=65 type="text" name="phone_number" maxlength="10" required>
+<br/>
+<br/>
+<!--Password Form Field -->
+    <label for="Password"> Password: </label>
+    <input id="Password" size=65  type="Password" name="Password" required>
+<br/>
+<br/>
+<!--submit form button-->
+<input type="submit" size=35 value="Sign-Up">
+</form>
+
+{% endblock%}
