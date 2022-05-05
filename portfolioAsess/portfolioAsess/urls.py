@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from folioApp.views import HomeView,SignUpView,LoginView,MapView,ProfileEditDetailsView,ProfileDetailsView
 
-
+"""url patterns Views functions
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView, name='HomeView'),
@@ -27,7 +28,4 @@ urlpatterns = [
     path('{{username}}-Edit-Details/', ProfileEditDetailsView, name='ProfileEditDetailsView'),
     path('MapDetails/', MapView, name='MapDetails'),
     path('List-All-Accounts/', MapView, name='ListAccounts')
-
-
-
 ]

@@ -3,35 +3,9 @@
 {%block title%} Home | Portfolio Application {% endblock %}
 
 {% block content%}
-<div class="container">
-    <center> 
 
-        <!--- Our Navigation Bar   -->
-        <div class="navbar">
-          <div class="Navbar-Content">
-              <!---Navbar Links -->
-               <ul class="NavLinksContainer">
-                   <li><a class="brand" href="{% url 'HomeView' %}"> Home </a></li>
-                   <li><a class="link" href="{% url 'ListAccounts' %}"> Account List </a></li>
-                   <li><a class="link" href="{% url 'MapDetails' %}"> Location View </a></li>
-                   <li><a class="link" href="{% url 'ProfileDetailsView' %}"> {{username}} DETAILS </a></li>
-               
-               
-                   <!--- User Authentication on login or request to logout -->
-                  {% block userlinks %}
-                  {% if user.is_authenticated %}
-                   <li><a class="navbar-link" href="{% url 'LoginView' %}"> {{ username }} </a></li>
-                  {% else %}  
-    {% comment %}               {% _login request%}
-     {% endcomment %}                <li><a class="navbar-link" href="{% url 'loginView' %}"> User/Admin Login </a></li>
-      
-                  {% endif %} 
-                  {% endblock %}
-               </ul>
-          </div>
-        </div>
-      
-              </center>
+<div class="container">
+
 
 
 </div>

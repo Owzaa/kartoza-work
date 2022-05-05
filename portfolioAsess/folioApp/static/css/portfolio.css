@@ -69,12 +69,12 @@ label{
 
 }
 #signIn{ 
-    display: flexbox;
+    display: flex;
     justify-content: center;
     width:300px;
     height: 50px;
-    background-color: indianred;
-    color: aliceblue;
+    background-color: rgba(241, 241, 241, 0.719);
+    color: rgb(68, 68, 68);
     float:none;
 }
 .button, #signin :hover{
@@ -92,6 +92,48 @@ h1 {
 
 }
 .HeaderTextContainer{
-    background-color: rgba(14, 13, 13, 0.014);
-    color: rgba(255, 255, 255, 0.938);
+    display: flexbox;
+    background-color: rgba(218, 218, 218, 0.562);
+    color: rgba(83, 80, 80, 0.507);
+    justify-content: center;
+}
+
+/* Navbar Styling ul>li>a Elements  */
+.navbar{
+    display: flexbox;
+    position:sticky;
+    padding: 15px;
+    padding-top: 1.5px;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+li{
+    display: flexbox;
+    padding: 20px;
+    padding-top: 20px;
+    justify-content: center;
+width: 35px;
+height: 45px;
+background-color: rgba(252, 243, 243, 0.075);
+box-shadow: 15px 3px 15px 0px rgba(119, 119, 119, 0.616);
+
+}
+li:hover{
+    background-color: rgba(0, 0, 0, 0.63);
+    color: rgb(255, 255, 255);
+}
+
+ul>li{
+text-decoration-line: none;
+display:inline;
+display: inline-flexbox;
+text-transform:capitalize;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgb(28, 31, 31);
+
+}
+a{
+    text-decoration: none;
+    color: rgb(90, 88, 88);
 }

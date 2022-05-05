@@ -2,6 +2,7 @@ from collections import UserList
 from msilib.schema import ListView
 from django.shortcuts import get_object_or_404, render
 
+from account.models import UserProfile
 
   
 
@@ -35,7 +36,7 @@ def ProfileEditDetailsView(request):
  '''
 
 # Listing all Accounts in our Database to our HTML TemplateView    
-def ListAccounts(request):
-    user = get_object_or_404()
-    return render(request,'List-Accounts.html',{'users':user})
+class ListAccounts(ListView):
+    user = get_object_or_404(UserProfile)
+    render(ListView,'List-Accounts.html',{'users':user})
     
