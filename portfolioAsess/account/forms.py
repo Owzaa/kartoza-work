@@ -20,13 +20,12 @@ form = userProfileForm(instance=UserProfile)
 # ProfileForm for UserProfile Registration
 class ProfileForm(forms.Form):
     class Meta:
-        model=userProfileForm
+        model=UserProfile
         
     username = forms.CharField(max_length=30)
     email = forms.EmailField()
-    home_address = forms.CharField(widget=forms.Textarea)
+    home_address = forms.CharField(widget=forms.Textarea())
     phone_number = forms.CharField(max_length=10)
     location = forms.CharField()
-    
-def __init__(self):
-    return self.username
+    password = forms.CharField(widget = forms.PasswordInput())
+

@@ -8,8 +8,8 @@ from django.urls import reverse_lazy
 # UserProfile Model:
 class UserProfile(models.Model):
         username = models.OneToOneField(User, on_delete=models.CASCADE)
-        home_address = models.TextField()
-        phone_number = models.CharField(max_length=12)
+        homeAddress = models.TextField()
+        phoneNumber = models.CharField(max_length=12)
         location = models.CharField(max_length=200) 
 # return userProfile name as string    
         def __str__(self):

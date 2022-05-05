@@ -1,7 +1,6 @@
 from collections import UserList
 from msilib.schema import ListView
 from django.shortcuts import get_object_or_404, render
-from account.models import UserProfile
 
 
   
@@ -18,18 +17,16 @@ def LoginView(request):
 
 # MapViewDetails Page
 def MapView(request):
-    Template = "MapDetail/userMapDetails.html"
-    return render(request,template_name=Template,context={}) 
+    
+    return render(request,"MapDetail/userMapDetails.html",context={}) 
 
 # UserDetailView Function
-def User_DetailsView(request):
-    Template = "UserDetails/userDetails.html"
-    return render(request,template_name=Template,context={}) 
+def ProfileDetailsView(request):
+    return render(request,"account/UserDetails/userDetails.html",context={}) 
 
 # userEditDetailView Function
-def User_EditDetailsView(request):
-    Template = "UserEditDetails/userEditDetails.html"
-    return render(request,template_name=Template,context={})
+def ProfileEditDetailsView(request):
+    return render(request,"UserEditDetails/userEditDetails.html",context={})
 
 # Listing Our Accounts stored in the Database:
 # AccountDetailsListingView ==> Subclassed->(ListView) 
@@ -37,8 +34,8 @@ def User_EditDetailsView(request):
     model = UserProfile
  '''
 
-# Listing all Accounts in our TemplateView    
+# Listing all Accounts in our Database to our HTML TemplateView    
 def ListAccounts(request):
     user = get_object_or_404()
-    return render(request,'account/List-Accounts.html',{})
+    return render(request,'List-Accounts.html',{'users':user})
     
