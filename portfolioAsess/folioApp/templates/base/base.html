@@ -13,44 +13,46 @@
   </head>
   <body>
     <div id="container">
+
+
       {% block navBar %}
       <center>
         <!--- Our Navigation Bar   -->
         <div class="navbar">
           <div class="content">
             <!---Navbar Links -->
-            <!--- Check if !User Authentication  & Authorization for NavbarLimk ViewPage-->
             <ul class="NavLinksContainer">
-              <!-- If user in our Database for userProfile/admin is Authenticated => Display NavbarLinks -->
-              {% block userlinks %}
-            {% if user.is_authenticated %} 
+             
+              <!--- Check if !User Authentication  & Authorization for NavbarLimk ViewPage-->
+              {% block userlinks %} {% if user.is_authenticated %}
               <li><a class="brand" href="{% url 'HomeView' %}"> Home </a></li>
               <li>
-                <a class="link" href="{% url 'ListAccounts' %}">
-                  Accounts
-                </a>
+                <a class="link" href="{% url 'ListAccounts' %}"> Accounts </a>
               </li>
               <li>
-                <a class="link" href="{% url 'MapDetails' %}"> Map-Location </a>
+                <a class="link" href="{% url 'MapDetails' %}"> Map </a>
               </li>
               <li>
                 <a class="link" href="{% url 'ProfileDetailsView' %}">
                   <code>{{user.username }}</code>Profile
                 </a>
               </li>
-
-              
               <li>
-                <a class="navbar-link" href="{% url 'logout' %}"
-                  > <code>{{user.username }}</code> logout
+                <a class="link" href="{% url 'ProfileEditDetailsView' %}">
+                  <code>{{user.username }}</code> Profile(Edit)
+                </a>
+              </li>
+
+              <li>
+                <a class="navbar-link" href="{% url 'logout' %}">
+                  <code>{{user.username }}</code> logout
                 </a>
               </li>
               {% else %}
               <li>
                 <a class="navbar-link" href="{% url 'LoginView' %}"> login </a>
               </li>
-            {% endif %} 
-              {% endblock %}
+              {% endif %} {% endblock %}
             </ul>
           </div>
         </div>
@@ -58,7 +60,12 @@
       {%endblock%}
 
       <!-- Displaying our Data  -->
-      {% block content %} {% endblock %}
+      {% block content %}
+      
+      
+      
+      
+      {% endblock %}
     </div>
   </body>
 </html>
