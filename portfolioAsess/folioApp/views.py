@@ -5,7 +5,7 @@ Date: 06/05/2022
 Published: https://github.com/Owzaa/repositry/
 
 Book Refferenced(ISBN): Django Documentation
-Release 3.2.12.dev 
+Version Release: 3.2.12.dev 
  
 """
 
@@ -55,7 +55,7 @@ def LoginView(request):
 
 @login_required(login_url="/LoginView/")
 def MapView(request):
-    return render(request,"MapDetail/MapDetails.html",context={}) 
+    return render(request,"MapDetail/MapAccounts.html",context={}) 
 
 # UserDetailView Function
 @login_required(login_url="/LoginView/")
@@ -77,13 +77,7 @@ def ListAccounts(request):
  
 
 
-
-
-
-
-
- 
-    
+  
 """ 
 LOGIN / LOGOUT FUNCTIONS  
 
