@@ -23,11 +23,11 @@
             <ul class="NavLinksContainer">
               <!-- If user in our Database for userProfile/admin is Authenticated => Display NavbarLinks -->
               {% block userlinks %}
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated %} 
               <li><a class="brand" href="{% url 'HomeView' %}"> Home </a></li>
               <li>
                 <a class="link" href="{% url 'ListAccounts' %}">
-                  Account-List
+                  Accounts
                 </a>
               </li>
               <li>
@@ -35,16 +35,17 @@
               </li>
               <li>
                 <a class="link" href="{% url 'ProfileDetailsView' %}">
-                  Profile-Details
+                  <code>{{user.username }}</code>Profile
                 </a>
               </li>
 
-              {% else %}
+              
               <li>
-                <a class="navbar-link" href="{% url 'LoginView' %}"
-                  >{{ username }} logout
+                <a class="navbar-link" href="{% url 'logout' %}"
+                  > <code>{{user.username }}</code> logout
                 </a>
               </li>
+              {% else %}
               <li>
                 <a class="navbar-link" href="{% url 'LoginView' %}"> login </a>
               </li>

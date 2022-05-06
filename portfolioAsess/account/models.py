@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 # UserProfile Model:
 class UserProfile(models.Model):
         username = models.OneToOneField(User, on_delete=models.CASCADE)
+         
         homeAddress = models.TextField()
         phoneNumber = models.CharField(max_length=12)
         location = models.CharField(max_length=200) 
@@ -18,7 +19,7 @@ class UserProfile(models.Model):
 # Instances when save button is clicked               
 
 @receiver (post_save,sender=User)
-def create_user(self,sender,instance,created, **kwargs):
+def create_user(created, **kwargs):
     if created:
        create_user_profile(instance=User)
 

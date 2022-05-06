@@ -1,5 +1,7 @@
 from ast import arg
 from msilib.schema import ListView
+from types import MemberDescriptorType
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from account.models import UserProfile
 from account.forms import ProfileForm
@@ -19,7 +21,7 @@ def LoginView(request):
 # MapViewDetails Page
 def MapView(request):
     
-    return render(request,"MapDetail/userMapDetails.html",context={}) 
+    return render(request,"MapDetail/MapDetails.html",context={}) 
 
 # UserDetailView Function
 def ProfileDetailsView(request):
@@ -35,23 +37,31 @@ def ProfileEditDetailsView(request):
 #     model = UserProfile
 # Listing all Accounts in our Database to our HTML TemplateView    
 def ListAccounts(request):
-        user = get_object_or_404()
-        render(request,'List-Accounts.html',{'users':user})
+     return   render(request,'account/List-Accounts.html',{})
     
 """ 
-Accessing all the data that has been
-passed to the POST by our Form()
+This View logs in a Mmeber of the SIte
+LEGEND: 
+m => Member
 
+
+Login / logout Views()  Session=> activity 
+by showing who and when on the admin page
 """
 def login(request):
-    username = "Not yet logged in"
+    m = MemberDescriptorType.objects.get(username=request.POST['username'])
     
-    if request.method == "POST":
-    #GET: ourForm (request.POST): the posted form data
-        LoginForm =ProfileForm(request.POST) 
-    if LoginForm.is_valid():
-        username =LoginForm.cleaned_data['username']
-        
+    if m.password == request.POST['password']:
+        #Session Activity Log Request for Our Admin Log HISTORY
+        request.session['member_id'] = m.id
+        return HttpResponse('Welcome You are Logged in!') 
+    # If ERROR    
     else:
-        LoginForm =userProfileForm()
-    return render(request,"account/UserDetails/userDetails.html",{'username': username}) 
+        return HttpResponse("Your Username and Password didn't match.")
+
+def logout(request):
+    try:
+        del request.session['member_id']
+    except KeyError:
+        pass
+    return HttpResponse("You're logged out")

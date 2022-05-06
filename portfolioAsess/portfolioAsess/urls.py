@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from folioApp.views import HomeView,SignUpView,LoginView,MapView,ProfileEditDetailsView,ProfileDetailsView
+from folioApp.views import HomeView,logout, ListAccounts,SignUpView,LoginView,MapView,ProfileEditDetailsView,ProfileDetailsView
 
 """url patterns Views functions
 """
@@ -24,8 +24,9 @@ urlpatterns = [
     path('', HomeView, name='HomeView'),
     path('sign-up/', SignUpView, name='SignUpView'),
     path('login/', LoginView, name='LoginView'),
+    path('logout/', logout, name='logout'),
     path('Profile-Details/', ProfileDetailsView, name='ProfileDetailsView'),
     path('Edit-Profile-Details/', ProfileEditDetailsView, name='ProfileEditDetailsView'),
     path('MapDetails/', MapView, name='MapDetails'),
-    path('List-All-Accounts/', MapView, name='ListAccounts')
+    path('All-Accounts/', ListAccounts, name='ListAccounts')
 ]
