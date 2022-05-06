@@ -29,7 +29,7 @@ form{
 
 input{
     display: -moz-box;
-    padding-bottom:15px;
+    padding-:15px;
     width: 100%;
     justify-content: center;
     height: 40px;
@@ -78,20 +78,24 @@ label{
     color: rgb(68, 68, 68);
     float:none;
 }
-.button,#signin :hover{
+.button:hover{
+    display: flex;
     background-color: rgba(1, 5, 24, 0.527);
     color: rgba(255, 255, 255, 0.678);
     transition: .5;
     
 }
+
+
 h1 {
     display: flex;
-    justify-items: center;
     justify-content: center;
     color: rgba(53, 53, 53, 0.596);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 
 }
+
+
 .HeaderTextContainer{
     display: flexbox;
     background-color: rgba(218, 218, 218, 0.562);
@@ -102,24 +106,26 @@ h1 {
 /* Navbar Styling ul>li>a Elements  */
 .navbar{
     display: flex;
-    position:sticky;
+    position:static;
     padding: 15px;
-    padding-top: 1.5px;
-    justify-content: space-evenly;
+    padding-top: 15px;
+    justify-content: space-between;
     justify-items: center;
 }
 
 li{
-    display: flexbox;
-    padding: 20px;
-    padding-top: 20px;
+    display: flex;
+    padding: 20px 25px;
+    padding-top: 5px;
     justify-content: center;
 width: 35px;
 height: 45px;
 background-color: rgba(252, 243, 243, 0.075);
 box-shadow: 15px 3px 15px 0px rgba(119, 119, 119, 0.616);
-
 }
+
+
+
 li:hover{
     background-color: rgba(0, 0, 0, 0.63);
     color: rgb(255, 255, 255);
@@ -127,13 +133,15 @@ li:hover{
 
 ul>li{
 text-decoration-line: none;
-display:inline;
-display: inline-flexbox;
+display: inline;
 text-transform:capitalize;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
-color: rgb(28, 31, 31);
+color: rgb(145, 145, 145);
 
 }
+
+
+
 a{
     text-decoration: none;
     color: rgb(90, 88, 88);
