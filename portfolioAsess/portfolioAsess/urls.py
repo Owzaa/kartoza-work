@@ -25,7 +25,7 @@ urlpatterns = [
     path('sign-up/', SignUpView, name='SignUpView'),
     path('login/', LoginView, name='LoginView'),
     path('Profile-Details/', ProfileDetailsView, name='ProfileDetailsView'),
-    path('{{username}}-Edit-Details/', ProfileEditDetailsView, name='ProfileEditDetailsView'),
+    path('Edit-Profile-Details/', ProfileEditDetailsView, name='ProfileEditDetailsView'),
     path('MapDetails/', MapView, name='MapDetails'),
     path('List-All-Accounts/', MapView, name='ListAccounts')
 ]

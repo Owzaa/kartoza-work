@@ -12,19 +12,22 @@ class UserProfile(models.Model):
         phoneNumber = models.CharField(max_length=12)
         location = models.CharField(max_length=200) 
 # return userProfile name as string    
-        def __str__(self):
-                return self.username
+      
 
 # @receiver Send/Receive Signals for our object 
 # Instances when save button is clicked               
 
 @receiver (post_save,sender=User)
-def create_user(sender,instance,created, **kwargs):
+def create_user(self,sender,instance,created, **kwargs):
     if created:
-       create_user_profile.objects.create(user=instance)
+       create_user_profile(instance=User)
 
 
 #@receiver saving our userProfile instance object     
 @receiver (post_save,sender=User)
-def create_user_profile(instance, **kwargs):
-        instance.save() 
+def create_user_profile(instance,self, **kwargs):
+        instance.self.save() 
+
+
+def __str__(self):
+        return self.username

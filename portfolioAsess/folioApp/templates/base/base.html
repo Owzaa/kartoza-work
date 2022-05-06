@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="{% static 'css/portfolio.css' %}" />
   </head>
   <body>
-    <div id="content">
-      {%block content%}
+    <div id="container">
+      {% block navBar %}
       <center>
         <!--- Our Navigation Bar   -->
         <div class="navbar">
-          <div class="Navbar-Content">
+          <div class="content">
             <!---Navbar Links -->
             <!--- Check if !User Authentication  & Authorization for NavbarLimk ViewPage-->
             <ul class="NavLinksContainer">
               <!-- If user in our Database for userProfile/admin is Authenticated => Display NavbarLinks -->
-              {% block userlinks %} 
-              {% if user.is_authenticated %}
+              {% block userlinks %}
+            {% if user.is_authenticated %}
               <li><a class="brand" href="{% url 'HomeView' %}"> Home </a></li>
               <li>
                 <a class="link" href="{% url 'ListAccounts' %}">
@@ -40,18 +40,15 @@
               </li>
 
               {% else %}
-
               <li>
-                <a class="navbar-link" href="{% url 'logout' %}"
+                <a class="navbar-link" href="{% url 'LoginView' %}"
                   >{{ username }} logout
                 </a>
               </li>
-              {% endif %}
-               {% _login request%} 
               <li>
-                <a class="navbar-link" href="{% url 'LoginView' %}"> Login </a>
+                <a class="navbar-link" href="{% url 'LoginView' %}"> login </a>
               </li>
-
+            {% endif %} 
               {% endblock %}
             </ul>
           </div>
@@ -60,7 +57,7 @@
       {%endblock%}
 
       <!-- Displaying our Data  -->
-      {% block Content %} {% endblock %}
+      {% block content %} {% endblock %}
     </div>
   </body>
 </html>
