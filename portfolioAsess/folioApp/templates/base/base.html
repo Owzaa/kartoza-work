@@ -25,18 +25,21 @@
              
               <!--- Check if !User Authentication  & Authorization for NavbarLimk ViewPage-->
               {% block userlinks %} {% if user.is_authenticated %}
-              <li><a class="brand" href="{% url 'HomeView' %}"> Home </a></li>
+
               <li>
                 <a class="link" href="{% url 'ListAccounts' %}"> Accounts </a>
               </li>
+              
               <li>
                 <a class="link" href="{% url 'MapDetails' %}"> Location </a>
               </li>
+              
               <li>
                 <a class="link" href="{% url 'ProfileDetailsView' %}">
                   <code>{{user.username }}</code> Profile
                 </a>
               </li>
+
               <li>
                 <a class="link" href="{% url 'ProfileEditDetailsView' %}">
                   <code>{{user.username }}</code> Profile(Edit)
@@ -48,6 +51,7 @@
                   <code>{{user.username }}</code> logout
                 </a>
               </li>
+              
               {% else %}
               <li>
                 <a class="navbar-link" href="{% url 'LoginView' %}"> login </a>
