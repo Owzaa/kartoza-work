@@ -1,6 +1,5 @@
 from django.shortcuts import get_object_or_404,render
 from django.contrib.auth.models import User
-
 from .models import UserProfile
 
 
@@ -15,3 +14,6 @@ def user_list(request):
 def user_detail(request):
     user= get_object_or_404 (is_active=True)
     return render(request,'account/UserDetails/userDetails.html',{})
+
+
+
