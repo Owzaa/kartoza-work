@@ -11,31 +11,42 @@
 <form row=4 class="form-row" action="/registrationForm/" method="post">
 
 <!--Username form Field-->
-    <label for="username"> Username </label>
-    <input id="username" size=55 type="text" name="username" maxlength="30" required>
+<label for="username"> Username </label>
+<input id="username" size=55 type="text" name="username" maxlength="30" required>
+
+
+<!-- First name form Field-->
+<label for="firstname"> First Name </label>
+<input id="firstname" size=55 type="text" name="firstname" maxlength="30" required>
+
+
+<!--Last name form Field-->
+<label for="lastname"> Last Name </label>
+<input id="lastname" size=55 type="text" name="lastname" maxlength="30" required>
 
 <!--userEmail Field-->
 <label for="Email"> e-mail </label>
 <input id="Email" size=55 type="email" name="Email" required>
 
+<!--Phone-number-->
 <label for="phone_number"> Phone Number </label>
 <input id="phone_number" size=55 type="text" name="phone_number" maxlength="10" required="Please put in SA valid Numbers">
 
-<!--Username form Field-->
+<!--Address form Field-->
 <label for="home_address"> Home Address </label>
 <input id="home_address"  size=55 type="text" name="home_address" required>
 
 <label for="location"> Location </label>
-<input id="location" size=55 type="text" name="location" required>
+<input id="location" size=55 type="text" name="location" required>{{forms.Textfield}}
 
 
 <!--Password Form Field -->
     <label for="Password"> Password </label>
     <input id="Password" size=55 type="Password" name="Password" required>
 
-
+<br/>
 <!--submit form button-->
-<input class="button" type="submit" size=35 value="Sign-Up">
+<input class="button" id="sign-up" type="submit" size=35 value="Sign-Up">
 </form>
 
 {% endblock%}

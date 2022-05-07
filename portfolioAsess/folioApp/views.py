@@ -45,12 +45,12 @@ def LoginView(request):
 
 """ 
 
-                    MAP_PAGE()
+DECORATOR USAGE:
            
-@login_required decorator redirect user to login_url page if not Redirects
- to login page
+@login_required decorator => check if user is logged in or Redirect
+Unauthorised user to login page
  
-@user.permission.View: only Auth_Admin can Assess this Page
+@user.permission.View: permitted user {Auth_Admin} can Assess this Page
 """
 
 @login_required(login_url="/LoginView/")
