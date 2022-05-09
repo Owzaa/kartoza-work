@@ -132,7 +132,7 @@ h1 {
 
 li{
     display: flex;
-    padding: 20px 25px;
+    padding: 25px 35px;
     padding-top: 5px;
     justify-content: center;
 width: 25px;
@@ -159,14 +159,14 @@ color: rgba(8, 8, 8, 0.709);
 }
 
 
-
 a{
     text-decoration: none;
     display:inline-flexbox;
     justify-content: center;
     padding: auto;
+    font-weight: 700;
     margin: 5px;
-    color: rgba(29, 29, 29, 0.938);
+    color: rgba(39, 37, 37, 0.623);
 }
 a:hover{
     color:  white;
