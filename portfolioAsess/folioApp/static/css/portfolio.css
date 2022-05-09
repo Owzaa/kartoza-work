@@ -29,7 +29,7 @@ form{
 
 input{
     display:flex;
-    padding: 0px  35px;
+    padding: 10px  35px;
     width: 100%;
     justify-content: center;
     height: 40px;
@@ -45,7 +45,7 @@ label{
     font-weight: 600;
     justify-content:start;
     padding:10px 15px;
-    color: rgba(31, 31, 31, 0.952);
+    color: rgba(10, 10, 10, 0.753);
     text-transform: uppercase;
     
 }
@@ -69,7 +69,7 @@ label{
     display: flex ;
     font-weight: 700;
     justify-content: center;
-    color: rgb(27, 27, 27);
+    color: rgb(0, 0, 0);
     font-size: 62px;
     font-weight: 900;
     border-width: .5px;
@@ -86,7 +86,7 @@ label{
     width:300px;
     height: 50px;
     background-color: rgba(213, 29, 29, 0.719);
-    color: rgb(255, 255, 255);
+    color: rgba(10, 10, 10, 0.884);
     float:none;
 }
 
@@ -105,7 +105,6 @@ justify-content: center;
     
 }
 
-
 h1 {
     display: flex;
     justify-content: center;
@@ -113,7 +112,6 @@ h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 
 }
-
 
 .HeaderTextContainer{
     display: flexbox;
@@ -139,7 +137,7 @@ li{
     justify-content: center;
 width: 25px;
 height: 40px;
-background-color: rgba(15, 15, 15, 0.178);
+background-color: rgba(15, 15, 15, 0);
 box-shadow: 15px 3px 15px 0px rgba(119, 119, 119, 0.616);
 }
 
@@ -168,7 +166,7 @@ a{
     justify-content: center;
     padding: auto;
     margin: 5px;
-    color: rgba(118, 116, 116, 0.5);
+    color: rgba(29, 29, 29, 0.938);
 }
 a:hover{
     color:  white;
