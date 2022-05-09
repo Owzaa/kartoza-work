@@ -22,7 +22,7 @@ padding: 10px 15px;
 form{
     display:grid;
     justify-content: center;
-    padding: 5px 35px;
+    padding: 5px 25px;
 }
 
 /* All HTML Input Element styling */
@@ -42,9 +42,10 @@ input{
 label{
 
     display:flexbox;
+    font-weight: 600;
     justify-content:start;
-    padding:5px 15px;
-    color: rgba(71, 71, 71, 0.514);
+    padding:10px 15px;
+    color: rgba(31, 31, 31, 0.952);
     text-transform: uppercase;
     
 }
@@ -60,17 +61,15 @@ label{
     font-weight: 900;
     border-width: .5px;
     border-radius:15px;
-    box-shadow: 3px 8px 18px 0px rgba(227, 53, 53, 0.616);
+    box-shadow: 3px 8px 18px 0px rgba(22, 20, 20, 0.767);
 
 }
 
-
-
-
 .signinText{
     display: flex ;
+    font-weight: 700;
     justify-content: center;
-    color: rgb(70, 67, 67);
+    color: rgb(27, 27, 27);
     font-size: 62px;
     font-weight: 900;
     border-width: .5px;

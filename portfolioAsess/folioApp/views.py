@@ -103,7 +103,7 @@ def login(request):
     
     if m.password == request.POST['password']:
         #Session Activity Log Request for Our Admin Log HISTORY
-        request.session['member_id'] = m.id
+        request.session['user_id'] = m.id
         return HttpResponse('Welcome You are Logged in!') 
     # If ERROR    
     else:

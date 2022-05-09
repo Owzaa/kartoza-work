@@ -11,11 +11,19 @@ AccountProfileDetails for our userProfiles
         <h1 class="HeaderText"> ( {{user.username}} ) PROFILE-DETAILS </h1>
     </div>
 
-{% if user in users %}
+<div class="box">
+{% if user.is_authenticated %}
+<form class="form">
+<label> Username: <code>{{user.username}}</code> </label>
+<label> First Name: {{FirstName}} </label>
+<label> Last Name: {{user.lastName}} </label>
+<label> Home Address: {{user.homeAddress}} </label>
+<label> Phone-number:{{user.phoneNumber}} </label>
+<label> Location: {{user.location}} </label>
 
-
- 
-{%endif%%}
+</form>
+{% endif %}
+</div>
 
 
 

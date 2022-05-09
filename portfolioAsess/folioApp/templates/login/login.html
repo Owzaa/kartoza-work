@@ -11,7 +11,6 @@
 <form class="form-row" action="login" method="post">
 <!--cross site validation security -->
     {% csrf_token %}
-    {% form %}
 
     <!--Username form Field-->
   
@@ -27,6 +26,7 @@
 <br/>
 <!--submit form button-->
 <input class="SignInbutton" id="signIn" type="submit" size=35 value="Sign-in">
+
 </form>
 <br/>
 
