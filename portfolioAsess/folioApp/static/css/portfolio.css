@@ -33,7 +33,7 @@ input{
     width: 100%;
     justify-content: center;
     height: 40px;
-    color: rgba(39, 39, 39, 0.699);
+    color: rgba(12, 12, 12, 0.815);
     box-shadow: 5px 8px 20px 0px rgba(36, 35, 35, 0.507);
     border-radius: 12px;
     border: none;
@@ -86,7 +86,7 @@ label{
     width:300px;
     height: 50px;
     background-color: rgba(213, 29, 29, 0.719);
-    color: rgba(10, 10, 10, 0.884);
+    color: rgba(241, 239, 239, 0.884);
     float:none;
 }
 
@@ -99,8 +99,8 @@ justify-content: center;
 }
 .button:hover{
     display: flexbox;
-    background-color: rgba(1, 5, 24, 0.892);
-    color: rgba(255, 255, 255, 0.678);
+    background-color: rgba(1, 5, 24, 0.788);
+    color: rgba(221, 221, 221, 0.938);
     transition: .9s;
     
 }
@@ -116,8 +116,10 @@ h1 {
 
 .HeaderTextContainer{
     display: flexbox;
-    background-color: rgba(32, 31, 31, 0.562);
+    background-color: rgba(1, 2, 20, 0.76);
     color: rgb(255, 251, 251);
+    box-shadow: 15px 3px 15px 0px rgba(119, 119, 119, 0.616);
+
     justify-content: center;
 }
 
@@ -145,7 +147,7 @@ box-shadow: 15px 3px 15px 0px rgba(119, 119, 119, 0.616);
 
 
 li:hover{
-    background-color: rgba(0, 0, 0, 0.566);
+    background-color: rgba(4, 7, 17, 0.699);
     color: rgba(255, 255, 255, 0.17);
     font-weight: 700;
 }
