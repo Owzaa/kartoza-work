@@ -33,7 +33,7 @@ input{
     width: 100%;
     justify-content: center;
     height: 40px;
-    color: rgba(102, 102, 102, 0.699);
+    color: rgba(39, 39, 39, 0.699);
     box-shadow: 5px 8px 20px 0px rgba(36, 35, 35, 0.507);
     border-radius: 12px;
     border: none;
@@ -140,7 +140,7 @@ li{
     justify-content: center;
 width: 25px;
 height: 40px;
-background-color: rgba(15, 15, 15, 0.349);
+background-color: rgba(15, 15, 15, 0.178);
 box-shadow: 15px 3px 15px 0px rgba(119, 119, 119, 0.616);
 }
 

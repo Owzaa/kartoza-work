@@ -9,15 +9,12 @@ Version Release: 3.2.12.dev
  
 """
 
-from collections import UserList
-from msilib.schema import ListView
 from types import MemberDescriptorType
-from django.http import HttpResponse, QueryDict
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required,permission_required
 from account.models import UserProfile
-
-  
+ 
   
 """
                          LIBRARY IMPORTS(DECORATORS)
@@ -54,6 +51,7 @@ Unauthorised user to login page
 """
 
 @login_required(login_url="/LoginView/")
+@permission_required(perm='folioApp.view_choice', login_url='LoginView')
 def MapView(request):
     return render(request,"MapDetail/MapAccounts.html",context={}) 
 

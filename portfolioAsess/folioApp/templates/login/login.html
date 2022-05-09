@@ -9,8 +9,14 @@
     <br/>
    
 <form class="form-row" action="login" method="post">
-<!--Username form Field-->
-    <label for="username"> Username: </label>
+<!--cross site validation security -->
+    {% csrf_token %}
+    {% form %}
+
+    <!--Username form Field-->
+  
+
+<label for="username"> Username: </label>
     <input id="username"placeholder="Type your Username...." size=75 type="text" name="username" maxlength="30" required>
 <br/>
 <br/>
