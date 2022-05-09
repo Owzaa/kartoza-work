@@ -70,7 +70,7 @@ label{
 .signinText{
     display: flex ;
     justify-content: center;
-    color: rgba(82, 82, 82, 0.452);
+    color: rgb(70, 67, 67);
     font-size: 62px;
     font-weight: 900;
     border-width: .5px;
@@ -110,7 +110,7 @@ justify-content: center;
 h1 {
     display: flex;
     justify-content: center;
-    color: rgba(53, 53, 53, 0.596);
+    color: rgba(43, 43, 43, 0.596);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 
 }
@@ -118,8 +118,8 @@ h1 {
 
 .HeaderTextContainer{
     display: flexbox;
-    background-color: rgba(218, 218, 218, 0.562);
-    color: rgba(83, 80, 80, 0.837);
+    background-color: rgba(32, 31, 31, 0.562);
+    color: rgb(255, 251, 251);
     justify-content: center;
 }
 
@@ -140,7 +140,7 @@ li{
     justify-content: center;
 width: 25px;
 height: 40px;
-background-color: rgba(107, 101, 101, 0.075);
+background-color: rgba(15, 15, 15, 0.349);
 box-shadow: 15px 3px 15px 0px rgba(119, 119, 119, 0.616);
 }
 
@@ -157,7 +157,7 @@ text-decoration-line: none;
 display: inline;
 text-transform:capitalize;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
-color: rgba(48, 46, 46, 0.709);
+color: rgba(8, 8, 8, 0.709);
 
 }
 
