@@ -22,13 +22,15 @@ def __str__(self):
 # Instances when save button is clicked               
 
 @receiver (post_save,sender=User)
-def create_user(created, *args,**kwargs):
+def create_user(created,**kwargs):
     if created:
        create_user_profile(instance=User)
 
 
 #@receiver saving our userProfile instance object     
 @receiver (post_save,sender=User)
-def create_user_profile(instance,**kwargs):
+def create_user_profile(instance=User,**kwargs):
         instance.save() 
 
+def __str__(self):
+    return self.name
