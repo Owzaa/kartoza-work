@@ -21,7 +21,7 @@ from folioApp.views import HomeView,logout, ListAccounts,SignUpView,LoginView,Ma
 """
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'^account/', include('account.urls', app_name='account')),
+    # path(r'account/', include('account.urls')),
     path('', HomeView, name='HomeView'),
     path('sign-up/', SignUpView, name='SignUpView'),
     path('login/', LoginView, name='LoginView'),
