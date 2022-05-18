@@ -12,17 +12,17 @@ AccountProfileDetails for our userProfiles
     </div>
 
 <div class="box">
-{% if user.is_authenticated %}
+{%  for user in userProfiles %}
 <form class="form">
 <label> Username: <code>{{user.username}}</code> </label>
-<label> First Name: {{FirstName}} </label>
+<label> First Name: {{user.FirstName}} </label>
 <label> Last Name: {{user.lastName}} </label>
 <label> Home Address: {{user.homeAddress}} </label>
 <label> Phone-number:{{user.phoneNumber}} </label>
 <label> Location: {{user.location}} </label>
 
 </form>
-{% endif %}
+{% endfor %}
 </div>
 
 
