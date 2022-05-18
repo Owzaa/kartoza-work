@@ -13,10 +13,16 @@ for our userProfiles
     <h1 class="HeaderText">ACCOUNT-LIST </h1>
 </div>
 
-
+<!--user list-view-->
 {% block accountList  %}
 
+{% for user in users  %}
+<ul>
+<li>{{user.users}}</li>
 
+</ul>
+
+{% endfor %}
 
 {% endblock %}
 

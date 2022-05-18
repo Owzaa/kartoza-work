@@ -13,7 +13,7 @@ def user_list(request):
 #   User Authentication check when a user is requeasting user_details
 def user_detail(request):
     user= get_object_or_404 (is_active=True)
-    return render(request,'account/UserDetails/userDetails.html',{})
+    return render(request,'account/UserDetails/userDetails.html',{'user': user})
 
 
 
