@@ -32,5 +32,4 @@ def create_user(created,**kwargs):
 def create_user_profile(instance=User,**kwargs):
         instance.self.save() 
 
-def __str__(self):
-    return self.name
+
