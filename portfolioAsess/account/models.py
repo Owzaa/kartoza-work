@@ -30,7 +30,7 @@ def create_user(created,**kwargs):
 #@receiver saving our userProfile instance object     
 @receiver (post_save,sender=User)
 def create_user_profile(instance=User,**kwargs):
-        instance.save() 
+        instance.self.save() 
 
 def __str__(self):
     return self.name
