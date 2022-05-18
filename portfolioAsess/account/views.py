@@ -7,6 +7,7 @@ from .models import UserProfile
 def user_list(request):
     class Meta:
         model = UserProfile
+        object_list = user_list.__get__.all()
     users = UserProfile.objects.filter(is_active=True)
     return render (request,'account/List-Accounts.html',{'users':users})
 
