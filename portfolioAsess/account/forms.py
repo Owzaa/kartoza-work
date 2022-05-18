@@ -8,7 +8,7 @@ from account.views import user_list
 class userProfileForm(ModelForm):
     class Meta:
         model = UserProfile 
-        fields = ['username','homeAddress','phoneNumber','location']
+        fields = ['firstName','lastName','username','homeAddress','phoneNumber','location']
 
 # Creating a form for sign-up
 form= userProfileForm()
@@ -23,6 +23,8 @@ class ProfileForm(forms.Form):
     class Meta:
         model=UserProfile
         
+    firstName = forms.ChoiceField(max_length=30)
+    lastName=forms.CharField(max_length=100)   
     username = forms.CharField(max_length=30)
     email = forms.EmailField()
     home_address = forms.CharField(widget=forms.Textarea())
